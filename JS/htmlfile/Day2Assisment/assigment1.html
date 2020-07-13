@@ -21,6 +21,7 @@
         var today = new Date();
         var day = today.getDay();
         var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+
         var hour = today.getHours();
         var minute = today.getMinutes();
         var second = today.getSeconds();
@@ -41,12 +42,12 @@
                 hour = 12;
                 prepand = ' Midnight';
             }
-                else {
-                    hour = 12;
-                    prepand = ' AM';
-                }
+            else {
+                hour = 12;
+                prepand = ' AM';
             }
-            document.write("Sample Output: Today is : " + daylist[day] + ".\n");
+        }
+        document.write("Sample Output: Today is : " + daylist[day] + ".\n");
         document.write("Current Time is: " + hour + prepand + " : " + minute + " : " + second);
     </script>
 
