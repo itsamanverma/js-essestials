@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assigment3</title>
     <h3>get the Current Date in Requiered Formate </h3>
+</head>
+
+<body>
     <script>
         var today = new Date();
         var dd = today.getDate();
@@ -25,17 +28,14 @@
             mm = '0' + mm;
         }
         today = mm + '-' + dd + '-' + yyyy;
-        document.write("Expected Output:" +today+ ", ");
+        document.write("Expected Output:" + today + ", ");
         today = mm + '/' + dd + '/' + yyyy;
-        document.write(today +" or ");
+        document.write(today + " or ");
         today = dd + '-' + mm + '-' + yyyy;
-        document.write(today+ ", ");
+        document.write(today + ", ");
         today = dd + '/' + mm + '/' + yyyy;
         document.write(today + " ");
     </script>
-</head>
-
-<body>
 </body>
 
 </html>
