@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Operation</title>
+</head>
+
+<body>
+    <script defer type="text/javascript">
+
+        console.log("Hello! Press the button to clear the console!");
+
+        function myFunction() {
+            console.clear();
+        }
+
+        for (i = 0; i < 10; i++) {
+            console.count();
+        }
+
+        console.error("You made a mistake");
+        // console.group();
+        console.log("Hello again, this time inside a group!");
+        // console.groupEnd();
+
+        console.log("Hello I'm AMAN!");
+        // console.groupCollapsed();
+        console.log("Hello again, this time inside a collapsed group!");
+
+        console.info("Hello CommunityLetsUpgrade!, I'm Aman, it being greate to grab the knowledge");
+
+        var table = [
+            { name: "AMAN", age: "24", city: "Varanasi" },
+            { name: "Sona", age: "23", city: "bangalore" },
+            { name: "Anki", age: "24", city: "Bhopal" },
+        ];
+        console.table(table);
+
+        function myFunction() {
+            myOtherFunction();
+        }
+
+        function myOtherFunction() {
+            console.trace();
+        }
+
+        console.time();
+        for (i = 0; i < 10; i++) {
+            console.count();
+        }
+        console.timeEnd();
+
+    </script>
+    <button onclick="myFunction()" style="display: flex;">Clear Console</button>
+
+    <button onclick="myFunction()"  >Start Trace</button>
+
+</body>
+
+</html>
