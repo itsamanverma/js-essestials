@@ -47,16 +47,13 @@
         }
         console.warn("Hey this is a waring");
         console.log('%c Hey this is Custusm message', 'color:green');
-        console.time();
-        for (i = 0; i < 10; i++) {
-            console.count();
-        }
-        console.timeEnd();
+        console.time("time");
+        console.timeEnd('time taken');
 
     </script>
     <button onclick="myFunction()" style="display: flex;">Clear Console</button>
 
-    <button onclick="myFunction()"  >Start Trace</button>
+    <button onclick="myFunction()">Start Trace</button>
 
 </body>
 
