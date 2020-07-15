@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4Assisment2</title>
+</head>
+
+<body>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var cars = ["audi", "BMW", "MG", "jaguar"];
+        /*  converting the array inti string */
+        document.write(fruits.toString());
+
+        document.write(fruits.join());
+
+        console.log(fruits.pop());
+        var arr = fruits.push("Kiwi");
+        console.log(Array.isArray(arr));
+
+        var arr = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = arr;
+
+        function myFunction() {
+            fruits.push("Kiwi");
+            document.getElementById("demo").innerHTML = arr;
+        }
+        var x = fruits.shifet()
+        console.log(x);
+        var y = fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+        console.log(y);
+        var arr1 = fruits.splice(2, 0, "Lemon", "Kiwi");
+        console.log(arr1);
+
+        var Girls = ["Cecilie", "Lone"];
+        var Boys = ["Emil", "Tobias", "Linus"];
+        var Children = Girls.concat(Boys);
+        console.log(Children);
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos = str.indexOf("locate");
+        console.log(pos);
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos = str.lastIndexOf("locate");
+        console.log(pos);
+
+        var str = "Please locate where 'locate' occurs!";
+        var pos = str.search("locate");
+        console.log(pos);
+
+        var str = "Apple, Banana, Kiwi";
+        var res = str.slice(7, 13);
+        console.log(res);
+
+        var text1 = "Hello World!";       // String
+        var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+        console.log(text2);
+
+        var text1 = "Hello World!";       // String
+        var text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+        console.log(text2);
+
+        var str = "       Hello World!        ";
+        console.log(str.trim());
+
+        if (!String.prototype.trim) {
+            String.prototype.trim = function () {
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            };
+        }
+        var str = "       Hello World!        ";
+        console.log(str.trim());
+
+        var str = "HELLO WORLD";
+        console.log(str.charAt(0));
+
+        var str = "HELLO WORLD";
+        console.log(str.charCodeAt(0));         // returns 72    
+
+    </script>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+</body>
+
+</html>
