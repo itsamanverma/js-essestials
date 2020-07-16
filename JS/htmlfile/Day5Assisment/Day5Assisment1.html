@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5Assisment1</title>
+</head>
+<body>
+    <input type="text" id="userInput"=>give me input</input>
+    <button onclick="test()">Submit</button>
+    <script>
+        function test()
+        {
+            var input = document.getElementById("userInput").value;
+            if(input%2 == 0) {
+                document.write(`Output: the number entered is ${input} and Number is Even.`);
+            }else{
+                document.write(`Output: the number entered is ${input} and Number is Odd.`);
+            }
+        }
+    </script>
+</body>
+</html>
