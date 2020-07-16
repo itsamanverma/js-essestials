@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5Assisment3</title>
+</head>
+
+<body>
+    <input type="text" id="userInput"=>given marks</input>
+    <button onclick="test()">Submit</button>
+    <script defer>
+        function test() {
+            var text;
+            var input = document.getElementById("userInput").value;
+            switch (input) {
+                case '100':
+                    document.write(`Marks are ${input} and grade is A+`);
+                    break;
+                case '90':
+                    document.write(`Marks are ${input} and grade is A`);
+                    break;
+                case '80':
+                    document.write(`Marks are ${input} and grade is B+`);
+                    break;
+                case '70':
+                    document.write(`Marks are ${input} and grade is B`);
+                    break;
+                case '60':
+                    document.write(`Marks are ${input} and grade is C+`);
+                    break;
+                case '50':
+                    document.write(`Marks are ${input} and grade is C`);
+                    break;
+                case '40':
+                    document.write(`Marks are ${input} and grade is D+`);
+                    break;
+                case '33':
+                    document.write(`Marks are ${input} and grade is D`);
+                    break;
+                default:
+                    document.write(`Marks are ${input} and grade is F`);
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
