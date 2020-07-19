@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6Assisment2</title>
+    <h5>Destructure the following object</h5>
+</head>
+
+<body>
+    <!-- Destructure the following object -->
+    <script defer>
+        const person = {
+            name: "AMAN VERMA",
+            age: 24,
+            skill: ['laravel', 'js', 'php', 'java', 'aws'],
+            project: {
+                purpose: "JS-Essestial training",
+                discription: " Being active partication in JS-Essestial",
+            },
+            profession: "web-developer",
+        }
+        console.log(person); //Object
+        console.log(person.name); // AMAN VERMA
+        console.log(person['skill']); //Array
+        console.log(person.project.discription); //Being active partication in JS-Essestial
+        console.log(person.profession); //web-developer
+        console.log(person.project.purpose); //JS-Essestial training
+
+        const metadata = {
+            title: 'Scratchpad',
+            translations: [
+                {
+                    locale: 'de',
+                    localization_tags: ['tag'],
+                    last_edit: '2014-04-14T08:43:37',
+                    url: '/de/docs/Tools/Scratchpad',
+                    title: 'JavaScript-Umgebung'
+                }
+            ],
+            url: '/en-US/docs/Tools/Scratchpad'
+        };
+
+        let {
+            title: englishTitle, // rename
+            translations: [
+                {
+                    title: localeTitle, // rename
+                },
+            ],
+        } = metadata;
+
+        console.log(englishTitle); // "Scratchpad"
+        console.log(localeTitle);  // "JavaScript-Umgebung"  
+
+        let son = { name: "Sarah", country: "Nigeria", job: "Developer" };
+        let name, country, job;
+
+        ({ name, country, job } = son);
+
+        console.log(name);//"Sarah"
+        console.log(job);//"Developer"
+
+        let prson = { name: "Sarah", country: "Nigeria", job: "Developer" };
+
+        let { name: foo, job: bar } = prson;
+
+        console.log(foo);//"Sarah"
+        console.log(bar);//"Developer"
+
+        let Person = { Name: "Sarah", country: "Nigeria", job: "Developer" ,Friends: ["Annie", "Becky"] };
+
+        let { Name, Friends, ...others } = Person;
+
+        console.log(Name);//"Sarah"
+        console.log(Friends);//["Annie", "Becky"]
+        console.log(others);// {country: "Nigeria", job: "Developer"}
+    </script>
+</body>
+
+</html>
