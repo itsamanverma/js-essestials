@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6Assisment1</title>
+</head>
+
+<body>
+    <!-- Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and
+    "fizzbuzz" at multiples of 3 and 5. -->
+    <script>
+        for (x = 1; x <= 100; x++) {
+            if (x % 3 == 0) {
+                document.write("fizz");
+            }
+            if (x % 5 == 0) {
+                document.write("buzz");
+            }
+            if ((x % 3 != 0) && (x % 5 != 0)) {
+                document.write("fizzbuzz");
+            }
+            document.write('<br>'); 
+        }
+    </script>
+</body>
+
+</html>
