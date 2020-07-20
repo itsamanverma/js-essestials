@@ -9,17 +9,21 @@
 
 <body>
     <script>
-        function isPrime(num) {
-            var sqrtnum = Math.floor(Math.sqrt(num));
-            var prime = num != 1;
-            for (var i = 2; i < sqrtnum + 1; i++) { // sqrtnum+1
-                if (num % i == 0) {
-                    prime = false;
-                    
-                    break;
+        function isPrime(n) {
+            outer: for (let i = 2; i < n; i++) {
+                inner: for (let j = 1; j < n; j++) {
+                    while (j > 1 && j < i) {
+                        if (i % j == 0) {
+                            continue outer;
+                        } else {
+                            continue inner;
+                        }
+                    }
                 }
+
+                console.log(i);
+
             }
-            return prime;
         }
         console.log(isPrime(3));
         console.log(isPrime(5));
@@ -27,7 +31,7 @@
         console.log(isPrime(33));
         console.log(isPrime(35));
 
-        
+
     </script>
 </body>
 
