@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6Assisment7</title>
+</head>
+
+<body>
+    <script>
+        function isPrime(num) {
+            var sqrtnum = Math.floor(Math.sqrt(num));
+            var prime = num != 1;
+            for (var i = 2; i < sqrtnum + 1; i++) { // sqrtnum+1
+                if (num % i == 0) {
+                    prime = false;
+                    
+                    break;
+                }
+            }
+            return prime;
+        }
+        console.log(isPrime(3));
+        console.log(isPrime(5));
+        console.log(isPrime(23));
+        console.log(isPrime(33));
+        console.log(isPrime(35));
+
+        
+    </script>
+</body>
+
+</html>
