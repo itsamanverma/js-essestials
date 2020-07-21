@@ -81,9 +81,6 @@
         let users = [user, user1, user2, mod, mod1, admin];
 
         console.log(user.login());
-        // console.log(mod);
-        // console.log(mod.deleteUser(user));
-
         users.forEach(element => {
             console.log(element);
         });
@@ -93,16 +90,14 @@
         admin.addCourse(user1, 'Angular');
         admin.addCourse(user1, 'Reactjs');
         admin.addCourse(user, 'Reactjs');
-        
-
         user1.login()
         mod.addCoins();
         mod1.addCoins();
         mod.addCoins();
         mod.removeCoins();
-        user1.logout()
+        user1.logout();
         user.login().getDetails().logout();
-
+        mod.login().addCoins().addCoins().removeCoins().logout();
         admin.removeCourse(user1, 'Python');
         admin.removeCourse(user1, 'Angular');
 
