@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7Assisment1</title>
+</head>
+<body>
+    <script>
+        flag = true;
+        input=prompt(`Enter the +ve number`);
+        while (flag) {
+            if (input >= 0 ) {
+                flag = false;
+            }
+            else{
+                input=prompt(`Enter the valid +ve number`);
+                console.log(input);
+            }
+        }
+
+        var inputArray = [];
+        for (var i= 0; i<=input; i++) {
+            inputArray.push(i);
+        }
+        console.log(inputArray);
+
+        let oddNoArr =inputArray.filter(el=>el%2!==0);
+        console.log(oddNoArr);
+
+        let cubic = inputArray.filter(el=>el%2!==0).map(el=>el**3);
+        console.log(cubic);
+        
+
+        
+        
+    </script>
+</body>
+</html>
