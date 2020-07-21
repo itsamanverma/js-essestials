@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7Assisment2</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.courses = [];
+            }
+
+            static greet() {
+                console.log("Hello There");
+            }
+
+            login() {
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout() {
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+            getDetails() {
+                console.log(`Name is ${this.name}, email is ${this.email}`);
+                return this;
+            }
+
+        }
+
+        class Moderator extends User {
+            constructor(name, age, email, role) {
+                super(name, age, email);
+                this.role = role;
+                this.luCoins = 0;
+            }
+            addCoins() {
+                this.luCoins++;
+                console.log(`${this.name} has ${this.luCoins} coins`);
+                return this;
+            }
+            removeCoins() {
+                this.luCoins--;
+                console.log(`${this.name} has ${this.luCoins} coins`);
+                return this;
+            }
+            deleteUser(user) {
+                users = users.filter(u => {
+                    return u.email != user.email;
+                })
+            }
+
+        }
+
+        class Admin extends Moderator {
+            addCourse(user, course) {
+                user.courses.push(course);
+                console.log(user);
+            }
+            removeCourse(user, course) {
+                user.courses.pop(course);
+                console.log(user);
+                
+            }
+        }
+
+        const user = new User('sona', 24, 'sona@gmail.com');
+        const mod = new Moderator('mini', 24, 'mini@gmail.com', 'moderator');
+        let user1 = new User('Dilip', 25, 'dilip@gmail.com')
+        let user2 = new User('Krishnan', 24, 'k@gmai.com')
+        let mod1 = new Moderator('Berlin', 24, 'b@gmail.com', 'Moderator');
+        let admin = new Admin('Rio', 25, 'r@gmail.com');
+        let users = [user, user1, user2, mod, mod1, admin];
+
+        console.log(user.login());
+        // console.log(mod);
+        // console.log(mod.deleteUser(user));
+
+        users.forEach(element => {
+            console.log(element);
+        });
+        User.greet();
+        admin.addCourse(user1, 'Javascript');
+        admin.addCourse(user1, 'Python');
+        admin.addCourse(user1, 'Angular');
+        admin.addCourse(user1, 'Reactjs');
+        admin.addCourse(user, 'Reactjs');
+        
+
+        user1.login()
+        mod.addCoins();
+        mod1.addCoins();
+        mod.addCoins();
+        mod.removeCoins();
+        user1.logout()
+        user.login().getDetails().logout();
+
+        admin.removeCourse(user1, 'Python');
+        admin.removeCourse(user1, 'Angular');
+
+        mod.deleteUser(user2);
+        console.log(users);
+    </script>
+</body>
+
+</html>
