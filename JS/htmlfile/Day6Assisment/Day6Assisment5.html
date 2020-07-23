@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day6Assisment6</title>
 </head>
+
 <body>
     <script>
-        function reward(amount) {
-            
+        var amt = Number(prompt("Enter the total sales value made by salesman."));
+        if (amt >= 0 && amt <= 5000) {
+            var total_comm = amt * 0.02;
+            console.log(`Total Commision earned by salemann is ${total_comm}`);
+        } else if (amt >= 5001 && amt <= 10000) {
+            var total_comm = (amt * 0.02) + ((amt - 5001) * 0.05);
+            console.log(`Total Commision earned by salemann is ${total_comm}`);
+        } else if (amt >= 10001 && amt <= 20000) {
+            var total_comm = (amt * 0.02) + ((amt - 5001) * 0.05) + ((amt - 10001) * 0.07);
+            console.log(`Total Commision earned by salemann is ${total_comm}`);
+        } else if (amt > 20000) {
+            var total_comm = (amt * 0.02) + ((amt - 5001) * 0.05) + ((amt - 10001) * 0.07) + ((amt - 20000) * 0.1);
+            console.log(`Total Commision earned by salemann is ${total_comm}`);
         }
     </script>
 </body>
+
 </html>
