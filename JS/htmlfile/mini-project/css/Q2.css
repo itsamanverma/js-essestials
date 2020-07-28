@@ -1,0 +1,37 @@
+#center {
+    margin: 10% 30%;
+    font-family: tahoma;
+}
+
+.stopwatch {
+    border: 1px solid #000;
+    background-color: #eee;
+    text-align: center;
+    width: 656px;
+    height: 230px;
+    overflow: hidden;
+}
+
+.stopwatch span {
+    display: block;
+    font-size: 100px;
+}
+
+.stopwatch p {
+    display: inline-block;
+    font-size: 40px;
+}
+
+.stopwatch a {
+    font-size: 45px;
+}
+
+a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+    padding: 12px 14px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    margin-left: 5px;
+    background-color: lightblue;
+}
