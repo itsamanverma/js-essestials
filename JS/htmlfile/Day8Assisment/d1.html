@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="shoppinglist.css">
+    <title>Shopping List</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Shopping List</h2>
+        <div id='top'>
+            <!--
+  --><input type="text" id="input">
+            <!--
+  --><button id="add" onclick="createListItem()">ADD</button>
+        </div>
+
+        <div id='bottom'>
+            <ul id="list"></ul>
+        </div>
+    </div>
+    <script>
+        var items = [];
+        var index = 0;
+
+        function createListItem(text, done, dontStore) {
+            var li = document.createElement('li');
+            var imageRemove = document.createElement('img');
+
+            imageRemove.setAttribute('src', 'http://findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png');
+
+            li.textContent = text;
+            var i = index;
+            if (!dontStore) {
+                items[index++] = { text: text, done: false };
+                localStorage.setItem('items', JSON.stringify(items));
+            }
+            li.appendChild(imageRemove);
+            if (!done) {
+                var imageDone = document.createElement('img');
+                imageDone.setAttribute('src', 'https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/tick_green.png');
+                li.appendChild(imageDone);
+                imageDone.onclick = function () {
+                    li.removeChild(imageRemove);
+                    items[i].done = true;
+                    localStorage.setItem('items', JSON.stringify(items));
+                };
+            }
+            bottom.appendChild(li);
+
+            function remove() {
+                bottom.removeChild(li);
+                delete items[i];
+                localStorage.setItem('items', JSON.stringify(items));
+            }
+            imageRemove.onclick = remove;
+
+            li.ondblclick = remove;
+        }
+
+        function ShoppingList() {
+            createListItem(input.value);
+            input.value = "";
+            input.focus();
+        }
+
+
+        items = JSON.parse(localStorage.getItem('items') || '[]');
+        items.forEach(function (item) {
+            if (item) {
+                createListItem(item.text, item.done, true);
+            }
+        });
+    </script>
+</body>
+
+</html>
