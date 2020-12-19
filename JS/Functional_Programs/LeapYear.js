@@ -28,3 +28,11 @@ const userInput = readline.createInterface(
         input: process.stdin,
         output: process.stdout
     });
+
+var utility = require('./utility.js');
+let leap = () => {
+    userInput.question("Enter Year to check leap year or not = ", (year) => /*get user input*/ {
+        utility.checkLeapYear(year); // call the 
+    });
+}
+leap();
